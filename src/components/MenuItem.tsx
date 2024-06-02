@@ -5,11 +5,11 @@ type Props = {
     name: string;
 }
 
-export function ItemMenu({name}: Props) {
+export function MenuItem({name}: Props) {
     return(
         <button className="flex items-center gap-3">
                                 <span className="font-bold"> {name}  </span>
-                                <Image 
+                                <Image
                                     src={Arrow}
                                     alt="Arrow Dropdown"
                                     />
