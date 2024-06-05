@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Inter;
+}
+
+.talkd-menu{
+    background-color: #001F26;
+}
+
+.menu-item li span:hover{
+    text-decoration: 1px solid underline;
+}
+
+.talkdai-hero{
+    margin-top: 178px;
+}
