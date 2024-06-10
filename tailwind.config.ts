@@ -14,6 +14,9 @@ const config: Config = {
         'dark-blue': '#001F26',
         'primary-black': '#191919',
       },
+      fontFamily: {
+        'ubuntu-mono': ['"Ubuntu Mono"', 'monospace'],
+      },
     },
   },
   plugins: [],
