@@ -3,7 +3,7 @@ import { Container } from "./container";
 
 export function SectionHero() {
   return (
-    <section className="w-full lg:max-w-[1440px] h-auto bg-black bg-no-repeat bg-cover bg-center talkdai-hero text-white">
+    <section className="w-full mb-40 lg:max-w-[1440px] h-auto bg-black bg-no-repeat bg-cover bg-center talkdai-hero text-white">
       <Container>
         <div className=" w-full max-w-[954px] mx-auto text-center px-4">
           <div className="mb-24">
@@ -27,7 +27,7 @@ export function SectionHero() {
             </p>
           </div>
 
-          <div className="w-full max-w-[997px] h-auto flex flex-col md:flex-row justify-center gap-6 font-normal font-ubuntu-mono">
+          <div className="w-full max-w-[997px] h-auto flex flex-col md:flex-row justify-center gap-6 font-normal font-ubuntu-mono mb-6">
             <a
               href="https://github.com/talkdai/dialog"
               target="_blank"
@@ -56,7 +56,7 @@ export function SectionHero() {
             </a>
           </div>
 
-          <div className=" w-full max-w-[954px] mx-auto text-center px-4 text-primary-gray mt-32">
+          {/* <div className=" w-full max-w-[954px] mx-auto text-center px-4 text-primary-gray mt-32">
             <h1
               className=" font-semibold md:text-[46px]"
               style={{ lineHeight: 1.2 }}
@@ -68,7 +68,7 @@ export function SectionHero() {
                 <Cards/>
                 <Cards/>
                 <Cards/>
-          </div>
+          </div> */}
 
         </div>
       </Container>
