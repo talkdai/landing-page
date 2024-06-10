@@ -1,16 +1,17 @@
 import Image from "next/image";
 import Logo from "@/assets/Logo.svg";
 import { MenuItem } from "./MenuItem";
-import { Container } from "./container";
+import { Container } from "./Container";
 
 export function Header (){
     return(
-        <header className="flex justify-between items-center w-full h-20 bg-black px-8" style={{ marginTop: 50, paddingLeft: 122, paddingRight: 122}}>
+        <header className="flex justify-between items-center w-full h-20 px-4 bg-black md:px-8" style={{ marginTop: 20}}>
             <Image src={Logo} alt={Logo} />
             <Container>
                 <div className="talkd-menu p-2 rounded-md">
-                    <ul className="flex items-center gap-3">
+                    <ul className="flex flex-col md:flex-row items-center gap-3">
                         <MenuItem name="Home" isSelected />
+                        {/* <MenuItem name="Pricing"/> */}
                         <MenuItem name="About" />
                     </ul>
                 </div>
