@@ -10,9 +10,9 @@ export function Header (){
             <Container>
                 <div className="talkd-menu p-2 rounded-md">
                     <ul className="flex flex-col md:flex-row items-center gap-3">
-                        <MenuItem name="Home" isSelected />
+                        <MenuItem name="Home" isSelected/>
                         {/* <MenuItem name="Pricing"/> */}
-                        <MenuItem name="About" />
+                        <MenuItem name="About" isNotSelected />
                     </ul>
                 </div>
             </Container>

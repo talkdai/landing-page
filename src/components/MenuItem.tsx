@@ -1,16 +1,17 @@
 type Props = {
     name: string;
-    isSelected: boolean;
-    onClick: () => void;
+    isSelected?: boolean;
+    isNotSelected?: boolean; 
+    onClick?: () => void;
 }
 
-export function MenuItem ({name, isSelected, onClick}: Props) {
+export function MenuItem ({name, isSelected, isNotSelected, onClick}: Props) {
     return(
         // <button className="flex items-center gap-3">
         <li className="flex menu-item">
              <button className="flex items-center gap-2 pl-2" onClick={onClick}>
                 <span
-                    className={`font-semibold ${isSelected ? 'text-primary-purple' : 'text-white'}`}
+                    className={`font-semibold ${isSelected ? 'text-primary-purple' : isNotSelected ? 'text-white' : ''}`}
                     style={{marginRight: 4}}
                 >{name}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
