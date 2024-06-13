@@ -3,10 +3,10 @@ import { Container } from "./container";
 
 export function SectionHero() {
   return (
-    <section className="w-full  max-w-[1440px] max-h-[2146px] bg-black bg-no-repeat bg-cover bg-center talkdai-hero text-white">
+    <section className="w-full bg-black bg-no-repeat bg-cover bg-center talkdai-hero text-white">
       <Container>
-        <div className=" w-full max-w-[954px] min-h-[168px] mt-[178px] mx-auto text-center px-4">
-        <div className=" mb-32">
+        <div className=" w-full max-w-[954px] min-h-[168px] mt-10 md:mt-[178px] mx-auto text-center md:px-4 px-8">
+        <div className=" mb-16 md:mb-32">
             <h1
               className=" font-semibold text-center text-2xl md:text-[46px]  text-primary-gray md:font-bold"
               style={{ lineHeight: 1.2 }}>
@@ -25,7 +25,7 @@ export function SectionHero() {
             </p>
           </div>
 
-          <div className="w-full mx-auto flex flex-col md:flex-row justify-center gap-6 font-ubuntu-mono mb-6">
+          <div className="w-full mx-auto flex flex-col md:flex-row justify-center gap-6 font-ubuntu-mono mb-3">
             <a
               href="https://github.com/talkdai/dialog"
               target="_blank"
