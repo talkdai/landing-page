@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Logo from "@/assets/Logo.svg";
 import { MenuItem } from "./MenuItem";
@@ -12,9 +14,19 @@ export function Header (){
             <Container>
                 <div className="talkd-menu p-2 rounded-md">
                     <ul className="flex flex-col md:flex-row items-center gap-3">
-                        <MenuItem name="Home" isSelected/>
-                        {/* <MenuItem name="Pricing" isNotSelected/> */}
-                        <MenuItem name="About" isNotSelected />
+                        <MenuItem name="Home" 
+                        
+                        subItems={[
+                            {name:"About"},
+                            {name: "Pricing"},
+                        ]}
+                        />
+                        <li className=" hidden md:flex menu-item">
+                        <MenuItem name="About" />
+                        </li>
+                        <li className=" hidden md:flex menu-item">
+                        <MenuItem name="Pricing" />
+                        </li>
                     </ul>
                 </div>
             </Container>
