@@ -21,3 +21,93 @@ body {
 .talkdai-hero{
     margin-top: 110px;
 }
+
+/* Menu.css */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001F26;
+    padding: 10px 20px;
+    position: relative;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .menu-items {
+    display: flex;
+  }
+
+  .menu-item {
+    color: white;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+    padding: 0 16px;
+    display: flex;
+  }
+
+  .menu-item.selected, .menu-item:hover {
+    color: #9A59FF;
+  }
+
+  .menu-item:hover::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #9A59FF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+  }
+
+  .burger-icon {
+    font-size: 24px;
+    color: white;
+  }
+
+  .mobile-menu-items {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0f1b26;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+
+  .mobile-menu-items .menu-item {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #1a2a3a;
+  }
+
+  @media (max-width: 1000px) {
+    .menu{
+        display: block;
+    }
+    .menu-items {
+      display: none;
+    }
+
+    .burger-menu {
+      display: block;
+    }
+    .mobile-menu-items .menu-item::child {
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .mobile-menu-items {
+      display: none;
+    }
+  }

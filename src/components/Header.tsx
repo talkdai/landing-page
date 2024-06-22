@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Logo from "@/assets/Logo.svg";
-import { MenuItem } from "./MenuItem";
+// import { MenuItem } from "./MenuItem";
+import { Menu } from "./Menu";
 import { Container } from "./container";
 
 export function Header (){
@@ -11,11 +12,12 @@ export function Header (){
             <div className=" flex items-center">
             <Image src={Logo} alt="Logo" />
             </div>
-            <Container>
-                <div className="talkd-menu p-2 rounded-md">
+            <Menu/>
+            {/* <Container> */}
+                {/* <div className="talkd-menu p-2 rounded-md">
                     <ul className="flex flex-col md:flex-row items-center gap-3">
-                        <MenuItem name="Home" 
-                        
+                        <MenuItem name="Home"
+
                         subItems={[
                             {name:"About"},
                             {name: "Pricing"},
@@ -28,8 +30,10 @@ export function Header (){
                         <MenuItem name="Pricing" />
                         </li>
                     </ul>
-                </div>
-            </Container>
+                </div> */}
+            {/* </Container> */}
         </header>
     )
 }
+
+export default Header;
