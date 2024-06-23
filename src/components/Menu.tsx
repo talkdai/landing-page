@@ -4,7 +4,10 @@ export const Menu = () => {
   const [selected, setSelected] = useState('Home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const menuItems = ['Home', 'About'];
+  const menuItems = [
+    {page: 'Home', link: '#'},
+    {page: 'About', link: '#'},
+  ];
 
   // Close the mobile menu when the screen width exceeds 1000px
   useEffect(() => {
@@ -23,18 +26,20 @@ export const Menu = () => {
   }, []);
 
   return (
-    <nav className="menu">
+    <nav className="menu rounded-md flex">
       <div className="menu-items">
         {menuItems.map(item => (
           <div
-            key={item}
-            className={`menu-item ${selected === item ? 'selected' : ''}`}
-            onClick={() => setSelected(item)}
+            key={item.page}
+            className={`items-center flex gap-2 pl-2 pr-2 py-2 md:pl-4 md:pr-4 md:py-3 md:max-w-[340px] md:h-[40px] menu-item ${selected === item.page ? 'selected' : ''}`}
+            onClick={() => setSelected(item.page)}
           >
+            <a href={item.link}>
+              {item.page}
+            </a>
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-              <path d="M12.9602 15.7131L18.9702 9.70309L17.5572 8.28809L12.9602 12.8881L8.36419 8.28809L6.9502 9.70209L12.9602 15.7131Z" fill={`${selected === item ? '#9A59FF' : '#fff'}`}/>
+              <path d="M12.9602 15.7131L18.9702 9.70309L17.5572 8.28809L12.9602 12.8881L8.36419 8.28809L6.9502 9.70209L12.9602 15.7131Z" fill={`${selected === item.page ? '#9A59FF' : '#fff'}`}/>
             </svg>
-            {item}
           </div>
         ))}
       </div>
@@ -45,14 +50,16 @@ export const Menu = () => {
         <div className="mobile-menu-items">
           {menuItems.map(item => (
             <div
-              key={item}
-              className={`menu-item ${selected === item ? 'selected' : ''}`}
+              key={item.page}
+              className={`menu-item ${selected === item.page ? 'selected' : ''}`}
               onClick={() => {
-                setSelected(item);
+                setSelected(item.page);
                 setIsMobileMenuOpen(false);
               }}
             >
-              {item}
+              <a href={item.link}>
+              {item.page}
+            </a>
             </div>
           ))}
           <div key="close" className={`menu-item`} onClick={() => {setIsMobileMenuOpen(false);}}>

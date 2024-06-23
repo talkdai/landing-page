@@ -1,23 +1,23 @@
-// import { Cards } from "./Card";
-import { Container } from "./container";
+import { TestimonialCard } from "./Card";
+import { Container } from "./Container";
 
 export function SectionHero() {
   return (
-    <section className="w-full bg-black bg-no-repeat bg-cover bg-center talkdai-hero text-white">
+    <section className="w-full bg-black bg-no-repeat bg-cover bg-center hero text-white md:mb-[130px]">
       <Container>
-        <div className=" w-full max-w-[954px] min-h-[168px] mt-10 md:mt-[178px] mx-auto text-center md:px-4 px-8">
-        <div className=" mb-16 md:mb-32">
+        <div className="w-full max-w-[954px] min-h-[168px] mt-10 md:mt-[178px] mx-auto text-center md:px-4 px-8">
+        <div className="mb-16 md:mb-32">
             <h1
-              className=" font-semibold text-center text-2xl md:text-[46px]  text-primary-gray md:font-bold"
+              className="text-primary-gray font-semibold text-center text-2xl md:text-[46px] md:font-bold"
               style={{ lineHeight: 1.2 }}>
-              <span >
+              <span>
                 talkd is an open-source software that enables you to{" "}
               </span>
-              <span className=" text-primary-purple">
+              <span className="text-primary-purple">
                 easily deploy any LLM available through LangChain.
               </span>
             </h1>
-            <p className="text-sm md:text-[26px] mx-auto max-w-[675px] max-h-[62px] text-primary-gray mt-[32px]"
+            <p className="hero-subtext text-primary-gray md:text-[26px] mx-auto max-w-[675px] max-h-[62px] mt-[32px]"
               style={{ lineHeight: 1.2 }}
             >
               We’re currently in beta, working on making it as easy as possible
@@ -25,7 +25,7 @@ export function SectionHero() {
             </p>
           </div>
 
-          <div className="w-full mx-auto flex flex-col md:flex-row justify-center gap-6 font-ubuntu-mono mb-3">
+          <div className="w-full mx-auto flex flex-col md:flex-row justify-center gap-6 font-ubuntu-mono mb-3 apps-container">
             <a
               href="https://github.com/talkdai/dialog"
               target="_blank"
@@ -53,20 +53,22 @@ export function SectionHero() {
               </p>
             </a>
           </div>
-
-          {/* <div className=" w-full max-w-[954px] mx-auto text-center px-4 text-primary-gray mt-32">
-            <h1
-              className=" font-semibold md:text-[46px] leading-[55.67px]"
-            >
-              What our customers say about us
-            </h1>
+          <div className="testimonials-section">
+            <div className="w-full max-w-[954px] mx-auto text-center px-4 text-primary-gray mt-32">
+              <h1 className="font-semibold md:text-[46px] leading-[55.67px]">
+                What our customers say about us
+              </h1>
+            </div>
+            <div className="flex flex-col md:mt-[100px] justify-center gap-6 md:flex-row md:space-x-6 mb-16">
+                <TestimonialCard
+                  testimonial="I love the ease of use of Dialog, I was able to deploy my own LLM in minutes."
+                  avatarUrl='/static/images/avatar/1.png'
+                  name="John Doe"
+                  role="CEO, Company"
+                >
+                </TestimonialCard>
+            </div>
           </div>
-            <div className="flex flex-col mt-24 justify-center gap-6 md:flex-row md:space-x-6 mb-16">
-                <Cards/>
-                <Cards/>
-                <Cards/>
-          </div> */}
-
         </div>
       </Container>
     </section>
