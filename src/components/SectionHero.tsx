@@ -1,5 +1,5 @@
 import { TestimonialCard } from "./Card";
-import { Container } from "./Container";
+import { Container } from "./container";
 
 export function SectionHero() {
   return (
