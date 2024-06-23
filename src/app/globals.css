@@ -102,7 +102,6 @@ body {
 
 .faq-section h2{
   color: var(--faq-grey);
-  font-family: Inter;
   font-style: normal;
   font-weight: 600;
   line-height: 110%; /* 44px */
@@ -121,9 +120,16 @@ body {
 .faq-section summary{
   display: flex;
   color: var(--faq-grey);
-  list-style-type: '+';
+  list-style-type: none;
   list-style: 40px solid;
   line-height: 150%;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
 }
 
 .faq-section summary h3{
@@ -180,6 +186,7 @@ body {
   }
 
   .faq-section{
+    margin-top: 50px;
     padding: 24px 20px;
   }
 
