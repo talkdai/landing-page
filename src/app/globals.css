@@ -4,20 +4,225 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+:root {
+  --green-bg: #001F26;
+  --purple-text: #9A59FF;
+  --faq-grey: #B1C2BE;
+}
+
 body {
     background-color: #000;
     color: #fff;
     font-family: Inter;
 }
 
-.talkd-menu{
-    background-color: #001F26;
-}
 
 .menu-item li span:hover{
-    text-decoration: 1px solid underline;
+  text-decoration: 1px solid underline;
 }
 
-.talkdai-hero{
+/* Menu.css */
+.menu {
+  background-color: var(--green-bg);
+  font-size: 16px;
+  height: 40px;
+}
+
+.menu-items {
+  display: flex;
+}
+
+.menu-item {
+  color: white;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 8px;
+  font-weight: 600;
+}
+
+.menu-item.selected, .menu-item:hover {
+  color: var(--purple-text);
+}
+
+.menu-item:hover::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: var(--purple-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.burger-icon {
+  font-size: 24px;
+  color: white;
+}
+
+.mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0f1b26;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.mobile-menu-items {
+  transition: display 3s ease;
+}
+
+.mobile-menu-items .menu-item {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid #1a2a3a;
+}
+
+.testimonials-section {
+  display: none;
+}
+
+.faq-section{
+  background-color: #001F26;
+  width: 100%;
+  min-height: 100px;
+  display: block;
+  width: 100%;
+}
+
+.faq-section h2{
+  color: var(--faq-grey);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 44px */
+  font-size: 40px;
+}
+
+.faq-content{
+  padding: 24px 0;
+  border-bottom: 1px solid #004F61;
+}
+
+.faq-content:last-child {
+  border-bottom: none;
+}
+
+.faq-section summary{
+  display: flex;
+  color: var(--faq-grey);
+  list-style-type: none;
+  list-style: 40px solid;
+  line-height: 150%;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-section summary h3{
+  color: var(--faq-grey);
+  font-size: 24px;
+  font-weight: 400;
+  width: 100%;
+  display: flex;
+  padding: 8px 0;
+}
+
+.faq-section p{
+  color: var(--purple-text);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  padding: 16px 0;
+}
+
+.faq-section summary span{
+  text-align: right;
+  font-size: 40px !important;
+  float: right;
+}
+
+@media (max-width: 1000px) {
+  .menu{
+      display: block;
+      padding: 0 10px;
+      position: relative;
+      border-radius: 8px;
+      justify-content: space-between;
+      align-items: center;
+
+  }
+  .menu-items {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+  .mobile-menu-items .menu-item::child {
+    z-index: -1;
+  }
+
+  .hero-subtext {
+    font-size: 1.1rem;
+  }
+
+  header {
+    margin-top: 0 !important;
+  }
+
+  .faq-section{
+    margin-top: 50px;
+    padding: 24px 20px;
+  }
+
+  .faq-section h2{
+    font-size: 25px;
+  }
+
+  .apps-container{
+    align-items: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mobile-menu-items {
+    display: none;
+  }
+
+  .hero{
     margin-top: 110px;
+  }
+
+  .hero-subtext {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .faq-section{
+    padding: 24px 122px;
+  }
+
+  .faq-section h2{
+    padding-top: 20px;
+    font-size: 40px;
+  }
+
+  .apps-container a {
+    margin: 0px 25px;
+  }
 }
