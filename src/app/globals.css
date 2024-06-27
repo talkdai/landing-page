@@ -226,3 +226,7 @@ details > summary::-webkit-details-marker {
     margin: 0px 25px;
   }
 }
+.menu-item.selected svg path,
+.menu-item:hover svg path { 
+  fill: var(--purple-text);
+}
