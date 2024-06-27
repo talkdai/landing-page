@@ -38,7 +38,7 @@ const About = () => {
             width={521}
             height={728}
             className="rounded-lg shadow-lg object-cover mr-0 md:mr-8"
-            priority
+            priority={true}
           />
         </div>
       </div>
