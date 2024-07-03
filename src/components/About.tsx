@@ -9,26 +9,29 @@ const About = () => {
           <h1 className="text-3xl md:text-5xl font-bold text-gray-300 mb-4">
             Who is behind talkd?
           </h1>
-          <h2 className="text-xl md:text-2xl text-purple-500 mb-6">
-            Subheading for description or instructions
-          </h2>
           <p className="text-base md:text-xl text-gray-400 font-medium leading-relaxed mb-4">
-            Excepteur efficient emerging, minim veniam anim aute carefully
-            curated Ginza conversation exquisite perfect nostrud nisi intricate
-            Content. Qui international first-class nulla ut. Punctual
-            adipisicing, essential lovely queen tempor eiusmod irure.
+            Talkd.ai is a project led by Vinicius Mesel and advised by Thiago Avelino.
+            It focuses on developing conversational AI solutions to improve communication and streamline business processes.
+            With their combined expertise in AI and software development, the maintainers aim to make advanced technology more accessible and practical
+            for various applications.
           </p>
           <br />
+          <h2 className="text-xl md:text-2xl text-purple-500 mb-6">
+            Some of our sponsors/investors:
+          </h2>
           <ul className="list-disc list-inside text-base md:text-xl text-gray-400 font-medium mb-4 pl-2">
-            <li>Exclusive izakaya charming Scandinavian</li>
-            <li>Impeccable aute quality of life soft power pariatur</li>
-            <li>Melbourne occaecat discerning</li>
+            <li>Buser</li>
+            <li>Github Accelerator - 2024</li>
           </ul>
           <br />
-          <p className="text-base md:text-xl text-gray-400 font-medium leading-relaxed">
-            Qui wardrobe aliquip, et Porter destination Toto remarkable officia
-            Helsinki excepteur Basset hound. Zürich sleepy perfect consectetur.
+          <p className="text-base md:text-xl text-gray-400 font-medium leading-relaxed mb-4">
+            We are also grateful for our contributors who have helped us and continue to help us improve our code base.
+            Some highlights include:
           </p>
+          <ul className="list-disc list-inside text-base md:text-xl text-gray-400 font-medium mb-4 pl-2">
+            <li>Luan Fernandes</li>
+            <li>Walison Filipe</li>
+          </ul>
         </div>
         <div className="md:w-1/2 md:self-center relative ml-0 md:ml-4 md:pl-4 mt-8 md:mt-0">
           <Image
