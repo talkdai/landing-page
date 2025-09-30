@@ -22,6 +22,7 @@ const About = () => {
           <ul className="list-disc list-inside text-base md:text-xl text-gray-400 font-medium mb-4 pl-2">
             <li><a href="https://github.com/buserbrasil" target="_blank">Buser</a></li>
             <li><a href="https://github.blog/open-source/maintainers/github-accelerator-showcase-celebrating-our-second-cohort-and-whats-next/" target="_blank">Github Accelerator - 2024</a></li>
+            <li><a href="https://thesamba.capital/" target="_blank">The Samba Capital</a></li>
           </ul>
           <br />
           <p className="text-base md:text-xl text-gray-400 font-medium leading-relaxed mb-4">
