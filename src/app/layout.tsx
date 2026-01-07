@@ -1,9 +1,10 @@
 import "@/ui/globals.css";
-import type { Metadata } from "next";
-import { Header } from "@/components/Header";
+
+import { Header } from "@/ui/components/header/header";
+import { mono, sans } from "@/ui/fonts";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { sans, mono } from "@/ui/fonts";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "talkd.ai",
