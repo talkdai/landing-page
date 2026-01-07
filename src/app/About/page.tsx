@@ -1,11 +1,3 @@
-import About from "@/components/About";
+import { About } from "@/ui/components/about/about";
 
-const AboutPage = () => {
-    return (
-        <div>
-            <About />
-        </div>
-    );
-};
-
-export default AboutPage;
+export default About;
