@@ -1,11 +1,11 @@
-import { SectionHero } from "@/components/SectionHero";
-import { Faq } from "@/components/Faq";
+import { SectionHero } from "@/ui/components/section-hero/section-hero";
+import { Faq } from "@/ui/components/faq/faq";
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <SectionHero />
       <Faq />
-    </div>
+    </main>
   );
 }

@@ -1,15 +1,15 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Header } from "@/components/Header";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import "@/ui/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import { Header } from "@/ui/components/header/header";
+import { mono, sans } from "@/ui/fonts";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "talkd.ai",
-  description: "talkd.ai",
+  description:
+    "Open-source software for easy deployment of any LangChain-supported LLM",
 };
 
 export default function RootLayout({
@@ -19,11 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header/>
+      <body className={`${sans.className} ${mono.variable} antialiased`}>
+        <Header />
         {children}
-        <Analytics/>
-        <SpeedInsights/>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
