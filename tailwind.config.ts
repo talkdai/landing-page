@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        'brand': 'var(--brand)',
         'primary-purple': '#9A59FF',
         'primary-gray': '#B1C2BE',
         'dark-blue': '#001F26',
