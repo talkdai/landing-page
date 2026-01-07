@@ -2,22 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-roboto-mono);
+}
 
 :root {
-  --green-bg: #001F26;
-  --purple-text: #9A59FF;
-  --faq-grey: #B1C2BE;
+  --green-bg: #001f26;
+  --purple-text: #9a59ff;
+  --faq-grey: #b1c2be;
 }
 
 body {
-    background-color: #000;
-    color: #fff;
-    font-family: Inter;
+  background-color: #000;
+  color: #fff;
+  font-family: Inter;
 }
 
-
-.menu-item li span:hover{
+.menu-item li span:hover {
   text-decoration: 1px solid underline;
 }
 
@@ -41,12 +43,13 @@ body {
   font-weight: 600;
 }
 
-.menu-item.selected, .menu-item:hover {
+.menu-item.selected,
+.menu-item:hover {
   color: var(--purple-text);
 }
 
 .menu-item:hover::after {
-  content: '';
+  content: "";
   display: block;
   height: 2px;
   background-color: var(--purple-text);
@@ -92,15 +95,15 @@ body {
   display: none;
 }
 
-.faq-section{
-  background-color: #001F26;
+.faq-section {
+  background-color: #001f26;
   width: 100%;
   min-height: 100px;
   display: block;
   width: 100%;
 }
 
-.faq-section h2{
+.faq-section h2 {
   color: var(--faq-grey);
   font-style: normal;
   font-weight: 600;
@@ -108,16 +111,16 @@ body {
   font-size: 40px;
 }
 
-.faq-content{
+.faq-content {
   padding: 24px 0;
-  border-bottom: 1px solid #004F61;
+  border-bottom: 1px solid #004f61;
 }
 
 .faq-content:last-child {
   border-bottom: none;
 }
 
-.faq-section summary{
+.faq-section summary {
   display: flex;
   color: var(--faq-grey);
   list-style-type: none;
@@ -132,7 +135,7 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
-.faq-section summary h3{
+.faq-section summary h3 {
   color: var(--faq-grey);
   font-size: 24px;
   font-weight: 400;
@@ -141,7 +144,7 @@ details > summary::-webkit-details-marker {
   padding: 8px 0;
 }
 
-.faq-section p{
+.faq-section p {
   color: var(--purple-text);
   font-size: 20px;
   font-style: normal;
@@ -150,21 +153,20 @@ details > summary::-webkit-details-marker {
   padding: 16px 0;
 }
 
-.faq-section summary span{
+.faq-section summary span {
   text-align: right;
   font-size: 40px !important;
   float: right;
 }
 
 @media (max-width: 1000px) {
-  .menu{
-      display: block;
-      padding: 0 10px;
-      position: relative;
-      border-radius: 8px;
-      justify-content: space-between;
-      align-items: center;
-
+  .menu {
+    display: block;
+    padding: 0 10px;
+    position: relative;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
   }
   .menu-items {
     display: none;
@@ -185,16 +187,16 @@ details > summary::-webkit-details-marker {
     margin-top: 0 !important;
   }
 
-  .faq-section{
+  .faq-section {
     margin-top: 50px;
     padding: 24px 20px;
   }
 
-  .faq-section h2{
+  .faq-section h2 {
     font-size: 25px;
   }
 
-  .apps-container{
+  .apps-container {
     align-items: center;
   }
 }
@@ -204,7 +206,7 @@ details > summary::-webkit-details-marker {
     display: none;
   }
 
-  .hero{
+  .hero {
     margin-top: 110px;
   }
 
@@ -213,11 +215,11 @@ details > summary::-webkit-details-marker {
     line-height: 1.25rem;
   }
 
-  .faq-section{
+  .faq-section {
     padding: 24px 122px;
   }
 
-  .faq-section h2{
+  .faq-section h2 {
     padding-top: 20px;
     font-size: 40px;
   }
@@ -227,6 +229,6 @@ details > summary::-webkit-details-marker {
   }
 }
 .menu-item.selected svg path,
-.menu-item:hover svg path { 
+.menu-item:hover svg path {
   fill: var(--purple-text);
 }

@@ -8,14 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors:{
-        'primary-purple':'#9A59FF',
+      colors: {
+        'primary-purple': '#9A59FF',
         'primary-gray': '#B1C2BE',
         'dark-blue': '#001F26',
         'primary-black': '#191919',
-      },
-      fontFamily: {
-        'ubuntu-mono': ['"Ubuntu Mono"', 'monospace'],
       },
     },
   },
