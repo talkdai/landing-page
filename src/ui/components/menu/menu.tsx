@@ -15,7 +15,7 @@ export const Menu = () => {
   ];
 
   return (
-    <nav className="rounded-md flex">
+    <nav className="flex">
       {menuItems.map((item) => (
         <Link
           href={item.link}
