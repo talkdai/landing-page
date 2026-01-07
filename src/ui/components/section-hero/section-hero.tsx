@@ -2,7 +2,7 @@ import { HeroLink } from "@/ui/components/hero-link/hero-link";
 
 export function SectionHero() {
   return (
-    <div className="flex flex-col md:flex-row border-neutral-900 border-t h-[calc(100vh-72px)]">
+    <div className="flex flex-col lg:flex-row border-neutral-900 border-t h-[calc(100vh-72px)]">
       <div className="flex flex-1 border-r border-neutral-900 items-center justify-center">
         <h1 className="text-2xl font-extralight text-balance p-10 md:text-7xl">
           Talkd is an open-source software that enables you to
